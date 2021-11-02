@@ -219,7 +219,7 @@ if (opt$similarity) {
     { if(opt$h_lines){ geom_hline(yintercept = yTickMarks,
                                   color = "grey60",
                                   size = .1) }} +
-    scale_color_distiller(limits = c(0,100), palette = "Spectral") +
+    scale_color_distiller(limits = c(50,100), palette = "Spectral") +
     labs(color = "Mean Percent Identity (per query)", 
          title = paste0(   paste0("Post-filtering number of alignments: ", nrow(alignments),"\t\t\t\t"),
                            paste0("minimum alignment length (-m): ", opt$min_align,"\n"),
