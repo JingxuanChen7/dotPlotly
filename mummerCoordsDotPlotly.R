@@ -251,7 +251,7 @@ if (opt$similarity) {
       )
     )) +
     scale_x_continuous(breaks = cumsum(as.numeric(chromMax)),
-                       labels = levels(alignments$refID)) +
+                       labels = levels(alignments$refID), expand = c(0, 0)) +
     theme_bw() +
     theme(text = element_text(size = 8)) +
     theme(
@@ -260,7 +260,7 @@ if (opt$similarity) {
       panel.grid.minor.x = element_blank(),
       axis.text.y = element_text(size = 4, angle = 15)
     ) +
-    scale_y_continuous(breaks = yTickMarks, labels = substr(levels(alignments$queryID), start = 1, stop = 20)) +
+    scale_y_continuous(breaks = yTickMarks, labels = substr(levels(alignments$queryID), start = 1, stop = 20), expand = c(0, 0)) +
     { if(opt$h_lines){ geom_hline(yintercept = yTickMarks,
                                   color = "grey60",
                                   size = .1) }} +
