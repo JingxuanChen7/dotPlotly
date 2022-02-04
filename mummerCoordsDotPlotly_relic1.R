@@ -306,11 +306,11 @@ if (opt$similarity) {
 # gp
 ggsave(filename = paste0(opt$output_filename, ".png"), width = opt$plot_size, height = opt$plot_size, units = "in", dpi = 300, limitsize = F)
 
-#if(opt$interactive){
-#  pdf(NULL)
-#  gply = ggplotly(gp, tooltip = "text")
-#  htmlwidgets::saveWidget(as.widget(gply), file = paste0(opt$output_filename, ".html"))
-#}
+if(opt$interactive){
+ pdf(NULL)
+ gply = ggplotly(gp, tooltip = "text")
+ htmlwidgets::saveWidget(as.widget(gply), file = paste0(opt$output_filename, ".html"))
+}
 
 options(warn=0) # turn on warnings
 #
